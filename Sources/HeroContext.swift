@@ -148,6 +148,8 @@ extension HeroContext {
     let snapshotType: HeroSnapshotType = self[view]?.snapshotType ?? .optimized
 
     switch snapshotType {
+    case .custom:
+      snapshot = (view as? CustomSnapshotProvider)?.customSnapshotView() ?? UIView()
     case .normal:
       snapshot = view.snapshotView() ?? UIView()
     case .layerRender:

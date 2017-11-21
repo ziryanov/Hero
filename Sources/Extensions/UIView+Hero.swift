@@ -39,6 +39,10 @@ class SnapshotWrapperView: UIView {
   }
 }
 
+public protocol CustomSnapshotProvider {
+  func customSnapshotView() -> UIView?
+}
+
 public extension UIView {
   private struct AssociatedKeys {
     static var heroID    = "heroID"

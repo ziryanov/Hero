@@ -589,6 +589,11 @@ extension HeroModifier {
   public static var useNoSnapshot: HeroModifier = HeroModifier { targetState in
     targetState.snapshotType = .noSnapshot
   }
+  
+  
+  public static var useCustomSnapshot: HeroModifier = HeroModifier { targetState in
+    targetState.snapshotType = .custom
+  }
 
   /**
    Force the view to animate.

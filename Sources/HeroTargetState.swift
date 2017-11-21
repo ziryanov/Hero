@@ -39,6 +39,9 @@ public enum HeroSnapshotType {
   /// This will mess up the view hierarchy, therefore, view controllers have to rebuild
   /// its view structure after the transition finishes
   case noSnapshot
+  
+  /// customSnapshotView
+  case custom
 }
 
 public enum HeroCoordinateSpace {
